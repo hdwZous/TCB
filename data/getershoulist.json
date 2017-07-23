@@ -1,0 +1,159 @@
+{
+    "errno": 0,
+    "errmsg": "OK",
+    "result": [
+        {
+            "product_id": "2103595897532416",
+            "model_name": "红米3",
+            "brand_id": "3",
+            "brand_name": "小米",
+            "price": 428,
+            "com_price": "899",
+            "model_id": "482",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t018508913ce6b3aba9.jpg",
+                "big": "http://p0.qhmsg.com/t01419aec7d8bf96b3b.jpg",
+                "mid": "http://p0.qhmsg.com/t0187c5bc19dfe22db7.jpg",
+                "min": "http://p0.qhmsg.com/t015afded9237616654.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2097825033400320",
+            "model_name": "荣耀7",
+            "brand_id": "4",
+            "brand_name": "华为",
+            "price": 749,
+            "com_price": "1999",
+            "model_id": "187",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t014ed87dbbaf91cf1c.jpg",
+                "big": "http://p0.qhmsg.com/t0163e2a01dc6421242.jpg",
+                "mid": "http://p0.qhmsg.com/t012f9789d0cb23b037.jpg",
+                "min": "http://p0.qhmsg.com/t0105b0d0073912a3af.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2046992886415360",
+            "model_name": "note3",
+            "brand_id": "7",
+            "brand_name": "酷派",
+            "price": 430,
+            "com_price": "1040",
+            "model_id": "246",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t013d5551096ffca195.jpg",
+                "big": "http://p0.qhmsg.com/t013e8980cd1aa7bcdf.jpg",
+                "mid": "http://p0.qhmsg.com/t018168a79cdbd816ae.jpg",
+                "min": "http://p0.qhmsg.com/t01d17aa90048158012.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2094845377265664",
+            "model_name": "荣耀4A",
+            "brand_id": "4",
+            "brand_name": "华为",
+            "price": 398,
+            "com_price": "719",
+            "model_id": "264",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t012ef4ec36b8eb16e1.jpg",
+                "big": "http://p0.qhmsg.com/t0179c455220992203b.jpg",
+                "mid": "http://p0.qhmsg.com/t01e9729693df0e90a9.jpg",
+                "min": "http://p0.qhmsg.com/t01464a3befa9f42883.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2076705667465216",
+            "model_name": "华为畅享5S",
+            "brand_id": "4",
+            "brand_name": "华为",
+            "price": 559,
+            "com_price": "949",
+            "model_id": "494",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01fb16e18aff167fda.jpg",
+                "big": "http://p0.qhmsg.com/t01bc02b62fd663d351.jpg",
+                "mid": "http://p0.qhmsg.com/t0122229a8eb04d040c.jpg",
+                "min": "http://p0.qhmsg.com/t0142742272242786ba.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2076400967801856",
+            "model_name": "V3Max",
+            "brand_id": "21",
+            "brand_name": "vivo",
+            "price": 749,
+            "com_price": "",
+            "model_id": "631",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t018d3af9015fa94abe.png",
+                "big": "http://p0.qhmsg.com/t01550526744fc58c19.png",
+                "mid": "http://p0.qhmsg.com/t01a1ba7a773c9b55fa.png",
+                "min": "http://p0.qhmsg.com/t01bba216c04d90d722.png"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2103584393854976",
+            "model_name": "P8青春版",
+            "brand_id": "4",
+            "brand_name": "华为",
+            "price": 549,
+            "com_price": "1450",
+            "model_id": "240",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t0164d6a194c58c1b86.jpg",
+                "big": "http://p0.qhmsg.com/t01303474b86f5e3667.jpg",
+                "mid": "http://p0.qhmsg.com/t01fb446126d516c750.jpg",
+                "min": "http://p0.qhmsg.com/t01258337673c43440e.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2076489097829376",
+            "model_name": "畅享5",
+            "brand_id": "4",
+            "brand_name": "华为",
+            "price": 518,
+            "com_price": "",
+            "model_id": "500",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t01173003c431448995.jpg",
+                "big": "http://p0.qhmsg.com/t01374f7cd9bedad216.jpg",
+                "mid": "http://p0.qhmsg.com/t01de643c7e2007ce3e.jpg",
+                "min": "http://p0.qhmsg.com/t01d76394358eb2371c.jpg"
+            },
+            "mer_name": ""
+        },
+        {
+            "product_id": "2094900769759232",
+            "model_name": "荣耀畅玩4C",
+            "brand_id": "4",
+            "brand_name": "华为",
+            "price": 390,
+            "com_price": "999",
+            "model_id": "184",
+            "mer_id": "9",
+            "thum_img": {
+                "old": "http://p0.qhmsg.com/t017d83ecdfd6146ab2.jpg",
+                "big": "http://p0.qhmsg.com/t01f8fa424868b8c6ea.jpg",
+                "mid": "http://p0.qhmsg.com/t010015ea5b9ba042df.jpg",
+                "min": "http://p0.qhmsg.com/t0136be425b07b5da0e.jpg"
+            },
+            "mer_name": ""
+        }
+    ]
+}

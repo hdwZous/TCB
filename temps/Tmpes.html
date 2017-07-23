@@ -1,0 +1,27 @@
+<!-- 卖手机模板 -->
+<script type="text/html" id="saleTmp">
+	<%for(var i=0; i<result.length; i++){%>
+		<a href=<%="bang.360.cn/huishou/?from=index#brand="+result[i].brand_id%> target="_blank"><%=result[i].name%></a>
+	<%}%>
+</script>
+
+<!-- 买手机模板 -->
+<script type="text/html" id="buyTmp">
+	<%for(var i in result){%>
+		<a href=<%="bang.360.cn/liangpin/search?brand_id=" + i + "&from=index"%> target="_blank"><%=result[i]%></a>
+	<%}%>
+</script>
+
+<!-- 修电脑热模板 -->
+<script type="text/html" id="xiuHtmp">
+	<%for(var i=0;i<result.hot.length; i++){%>
+		<a href=<%="bang.360.cn" + result.hot[i].url %> target="_blank"><%=result.hot[i].name%></a>
+	<%}%>
+</script>
+
+<script type="text/html" id="xiuOtmp">
+	<%for(var i=0;i<result.other.length; i++){%>
+		<a href=<%="bang.360.cn" + result.other[i].url %> target="_blank"><%=result.other[i].name%></a>
+	<%}%>
+</script>
+

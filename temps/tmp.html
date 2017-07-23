@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>核心工具</title>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/baiduTemplate.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".stuInfo").load("tems.html",function(){
+				//请求数据
+				$.ajax({
+					url:"data/stu.json",
+					success: function(data){
+						//使用百度模板
+						var htmlstr = baidu.template("firstTmp",data);
+						$(".stuInfo").html(htmlstr);
+					}
+				})
+			})
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="stuInfo"></div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!-- 修手机模板 -->
+<script type="text/html" id="xiuTmp">
+	<%for(var i=0; i<result.length; i++){%>
+		<div class="row">
+			<div class="left-tit">
+				<%=result[i].name%>
+				<span>&gt;</span>
+			</div>
+			<div class="rignt-cnt">
+				<%for(var j=0; j<result[i].list.length; j++){%>
+					<a href=<%="bang.360.cn/shangmen/order?f_type=mobile&yy_type=2&s_type=youji&fault_id=" + result[i].list[j].id + "&from=index"%> target="_blank"><%=result[i].list[j].name%></a>
+				<%}%>				
+			</div>
+		</div>
+	<%}%>
+</script>

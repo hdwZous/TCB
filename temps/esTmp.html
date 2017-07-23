@@ -1,0 +1,12 @@
+<!-- 热门列表模板 -->
+<script type="text/html" id="esTmp">
+	<%for(var i=0; i<result.length; i++){%>
+		<a href=<%="/liangpin/product?product_id=" + result[i].product_id + "&from=index"%> target="_blank" class="cnt-inner-right-item">
+			<div class="p-img">
+				<img src=<%=result[i].thum_img.old%>>
+			</div>
+			<div class="p-name"><%=result[i].model_name%></div>
+			<div class="p-price"><%="￥"+result[i].price%></div>
+		</a>
+	<%}%>
+</script>

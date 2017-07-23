@@ -1,0 +1,38 @@
+<!-- 城市列表模板 -->
+<script type="text/html" id="shopcTmp">
+	<%for(var i=0; i< shop_data.length; i++){%>
+		<div class="list-item">
+			<a class="pic" href=<%=shop_data[i].shop_addr%> target="_blank"><img src=<%=shop_data[i].shop_ico%>></a>
+			<div class="cont">
+				<h3>
+					<a href=<%=shop_data[i].shop_addr%> target="_blank" title=<%=shop_data[i].shop_name%>><%=shop_data[i].shop_name%></a>
+					<div class="shop-grade">
+						店铺等级 : 
+						<a href="/c/help/#cont101" target="_blank" title=<%=shop_data[i].level + "级"%>>
+							<%for(var j=0; j<4; j++){%>
+								<span class="icon icon-dj icon-dj-2"></span>
+							<%}%>
+						</a>
+					</div>
+				</h3>
+				<div class="desc"><%="主营：" + shop_data[i].shop_desc%></div>
+				<div class="addr" title=<%=shop_data[i].addr%>><%="地址："+ shop_data[i].addr%>></div>
+				<div class="shop-score">
+					<div class="shop-item-pf">
+						<span title="出现服务纠纷，360同城帮先行赔付您支付的全额" class="icon icon-xxpf"></span>
+						先行赔付
+					</div>
+					<div class="shop-rz">
+						<span title="同城帮认证" class="icon icon-v-us pngfix"></span>
+						同城帮认证
+					</div>
+					<div class="shop-item-rq">
+						<span><%="成交量："+shop_data[i].count + "次成交"%></span>
+					</div>
+				</div>
+				<a class="into-shop" target="_blank" href=<%=shop_data[i].shop_addr%>>进入店铺</a>
+			</div>
+		</div>
+	<%}%>
+	<span style="font-size: 0" class="pageCount" pageCount=<%=Math.ceil(page_count/5)%>></span>
+</script>

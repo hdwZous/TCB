@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>360同城帮 - 手机维修、手机回收、二手良品</title>
+	<link rel="icon" href="img/360.ico">
+	<meta name= "keywords" content="手机维修,自营手机维修,上门修手机,上门手机维修,自营维修,手机上门修,手机修理,修理手机,手机换屏,修修哥,自营服务,上门服务,手机回收,二手良品,二手手机,二手机">
+	<meta name="description" content="360同城帮—为用户提供手机维修、平板维修、手机回收、二手良品、手机以旧换新等服务，专业的修修哥团队。支持上门维修、邮寄维修、到店维修。">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/banner.css">
+	<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/baiduTemplate.js"></script>
+	<script type="text/javascript" src="js/unslider.min.js"></script>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.3&key=06fb75f531ce19fd2af711465487d07a&&plugin=AMap.Scale,AMap.OverView,AMap.ToolBar"></script>
+</head>
+<body>
+	<div class="mask"></div>
+	<div id="panel-modeMapindex">
+		<div class="hd">
+			<h3>地图模式</h3>
+		</div>
+		<div class="bd">
+			<div id="maprecommendTips">
+				<p style="color:#666;padding-top:5px;">抱歉，此区域暂无商家。</p>
+				<p style="color:red;">为您找到以下和您相同城市的商家</p>
+			</div>
+		</div>
+		<div id="mode_map_container">
+			<object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;" type="text/html" data="about:blank">
+				<html>
+					<head></head>
+					<body></body>
+				</html>
+			</object>
+			<div class="amap-maps"></div>
+			<div class="amap-controls"></div>
+			<a href="http://gaode.com" class="amap-logo" target="_blank">
+				<img src="http://webapi.amap.com/theme/v1.3/mapinfo_05.png">
+			</a>
+			<div class="amap-copyright">
+				 © 2017 AutoNavi 
+				 <span>- GS(2016)710号</span>
+			</div>
+		</div>
+		<div id="merRepairMapPager" class="pagination">
+			<div class="pages" id="mapPages">
+				<!-- <span>1</span>
+				&nbsp;
+				<a href="javascript:;" data-pn="1">2</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="2">3</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="3">4</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="4">5</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="5">6</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="6">7</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="7">8</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="8">9</a>
+				&nbsp;
+				<a href="javascript:;" data-pn="9">10</a>
+				&nbsp;	
+				<a href="javascript:;" class="next" data-pn="1">下一页»</a> -->
+			</div>
+		</div>
+		<span class="map-close"></span>
+	</div>
+	<div class="return-top">
+		<a href="#" style="visibility: hidden; bottom: 42px; right: 10px;" class="return-a"></a>
+		<div style="width: 1200px;margin:0 auto;position: relative;" >
+			<div class="right-service">
+				<a href="javascript:void(0);" class="right-service-btn"></a>
+			</div>
+		</div>
+	</div>
+	<div class="topbar">
+		<div class="barin">
+			<div class="l-info">
+				<ul>
+					<li>
+						<span class="topbar-city">北京</span>
+						<a href="#" class="topbar-citychange">[切换城市]</a>
+					</li>
+					<li id="spacer"></li>
+					<li class="last">
+						<a href="http://bang.360.cn/" class="item">同城帮首页</a>
+					</li>
+				</ul>
+			</div>
+			<div class="r-info">
+				<ul>
+					<li>
+						<a href="#" class="user-login item">登录</a>
+					</li>
+					<li id="spacer"></li>
+					<li>
+						<a href="#" class="user-reg item">注册</a>
+					</li>
+					<li id="spacer"></li>
+					<li>
+						<a href="#" class="my-indent item">我的订单</a>
+					</li>
+					<li id="spacer"></li>
+					<li>
+						<span style="padding:0 10px">
+							<a href="javascript:void(0)" class="online-service" style="color:#666">在线客服</a>
+						    (9:00-21:00)
+						</span>
+					</li>
+					<li id="spacer"></li>
+					<li class="has-sub">
+						<span class="item" style="padding-right:26px">客户服务</span>
+						<p class="sub">
+							<a target="_blank" href="http://bang.360.cn/help">帮助中心</a>
+							<a target="_blank" href="/shangmen/pay">维修付款</a>
+						</p>
+					</li>
+					<li id="spacer"></li>
+					<li>
+						<a href="http://bbs.360.cn/forum-2617-1.html" class="item" target="_blank">论坛</a>
+					</li>
+					<li id="spacer"></li>
+					<li class="last">
+						<a href="#" class="item suggset" target="_blank" style="color:#F00;padding:0 0 0 10px">投诉建议</a>
+					</li>
+				</ul>
+			</div>
+			<div id="pop-city">
+				<div class="radius_top"></div>
+				<div class="cont">
+					<h3>
+						城市列表
+						<span id="closeCity"></span>
+					</h3>
+					<div class="city-list">
+					</div>
+				</div>
+				<div class="radius_top"></div>
+			</div>
+		</div>
+	</div>
+	<div class="nav-banner">
+		<div class="nav-banner-inner">
+			<div class="nav-inner-logo">
+				<a href="/?from=index"></a>
+			</div>
+			
+			<ul class="nav-right-list"> 
+				<li>
+					<a href="http://www.bang.360.cn/liangpin?from=index" target="_blank" title="二手良品">
+					二手良品
+					<span class="hot"></span>
+					</a>	
+				</li>
+				<li>
+					<a href="http://www.bang.360.cn/huishou?from=index" target="_blank" title="手机回收">手机回收</a>
+				</li>
+				<li>
+					<a href="http://www.bang.360.cn/shangmen/mobile?from=index" target="_blank" title="手机维修">手机维修</a>
+				</li>
+				<li>
+					<a href="http://www.bang.360.cn/shangmen/pc?from=index" target="_blank" title="电脑维修">电脑维修</a>
+				</li>
+				<li>
+					<a href="http://www.bang.360.cn/huanxin?from=index" target="_blank" title="以旧换新">以旧换新</a>
+				</li>
+				<li>
+					<a href="http://www.bang.360.cn/huanxin?from=index" target="_blank" title="手机租用">手机租用</a>
+				</li>
+			</ul>
+			
+		</div>
+	</div>
+	<div class="top-cate">
+		<div class="cate-list">
+			<ul class="cate-list-main">
+				<li class="item pngfix">
+					<a class="citem-xsj pngfix" href="/shangmen/mobile?from=index" target="_blank">修手机/Pad</a>
+					<span class="arrow-left pngfix"></span>
+				</li>
+				<li class="item pngfix">
+					<a class="citem-xdn pngfix" href="/shangmen/pc?from=index" target="_blank">修电脑</a>
+					<span class="arrow-left pngfix"></span>
+				</li>
+				<li class="item pngfix">
+					<a class="citem-hs pngfix" href="/huishou?from=index" target="_blank">卖手机/电脑</a>
+					<span class="arrow-left pngfix"></span>
+				</li>
+				<li class="item pngfix">
+					<a class="citem-lp pngfix" href="/liangpin?from=index" target="_blank">买二手机</a>
+					<span class="arrow-left pngfix"></span>
+				</li>
+			</ul>
+			<div class="cate-list-sub">
+				<div class="cate-list-item cate-list-sub1">
+				</div>
+				<div class="cate-list-item cate-list-sub2">
+					<div class="row">
+						<div class="col-left-tit">热门问题：</div>
+						<div class="col-right-cnt col-right-cnt1"></div>
+					</div>
+					<div class="row">
+						<div class="col-left-tit">其他问题：</div>
+						<div class="col-right-cnt col-right-cnt2"></div>
+					</div>
+				</div>
+				<div class="cate-list-item cate-list-sub3"></div>
+				<div class="cate-list-item cate-list-sub4"></div>
+			</div>
+		</div>
+		<div class="cate-slide">
+			<div class="cate-slide-loop">
+				<div class="slide-inner">
+					<ul class="slide-list" style="width: 4800px;">
+						<li>
+							<a href="http://bang.360.cn/liangpin/erhuo?self_enterprise=banner" target="_blank">
+								<img src="img/loop1.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="http://bang.360.cn/liangpin/samsung" target="_blank">
+								<img src="img/loop2.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="http://bang.360.cn/liangpin/mianxi" target="_blank">
+								<img src="img/loop3.png">
+							</a>
+						</li>
+						<li>
+							<a href="http://bang.360.cn/huanxin/shouji" target="_blank">
+								<img src="img/loop4.png">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- <div class="right-service">
+				<a href="javascript:void(0);" class="right-service-btn"></a>
+			</div> -->
+		</div>
+		<div class="top-cate-bottom">
+			<div class="top-cate-bottom-inner">
+				<div class="item">
+					<a href="/shangmen/order?f_type=mobile&yy_type=2&fault_id=10&showdetail=1&from=index" target="_blank">
+						<img src="img/item1.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a href="/xiu/battery?from=index" target="_blank">
+						<img src="img/item2.jpg">
+					</a>
+				</div>
+				<div class="item">
+					<a href="/huanxin/kindle?from=index" target="_blank">
+						<img src="img/item3.png">
+					</a>
+				</div>
+				<div class="item">
+					<a href="/liangpin/shengji?from=index" target="_blank">
+						<img src="img/item4.jpg">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hot-nav">
+		<div class="title">
+			<h2>热门手机回收</h2>
+			<a href="/huishou?from=index" target="_blank" class="go-more">查看更多</a>
+		</div>
+		<div class="cnt">
+			<div class="cnt-inner">
+				<div class="cnt-inner-left">
+					<a href="/huishou?from=index " target="_blank"></a>
+				</div>
+				<div class="cnt-inner-right" id="hot-list">
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hot-lp-product hot-nav">
+		<div class="title">
+			<h2>二手良品精选</h2>
+			<a href="/huishou?from=index" target="_blank" class="go-more">查看更多</a>
+		</div>
+		<div class="cnt">
+			<div class="cnt-inner">
+				<div class="cnt-inner-left">
+					<a href="/huishou?from=index " target="_blank"></a>
+				</div>
+				<div class="cnt-inner-right" id="es-list">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="shop-list">
+		<div class="title">
+			<h2>到店维修</h2>
+		</div>
+		<div class="cnt">
+			<div class="cnt-inner">
+				<div class="cnt-inner-left">
+					<div class="cnt-filter">
+						<div class="area-sel select-city">
+							<span class="select-text">北京</span>
+							<span class="icon"></span>
+						</div>
+						<div class="area-sel select-quxian">
+							<span class="select-text">选择区县</span>
+							<span class="icon"></span>
+							<div class="sel-quxian-pannel select-pannel">
+								<h3>
+									区县列表
+									<span id="quxian-close"></span>
+								</h3>
+								<div class="select-list">
+									<a href="javascript:;">全部区县</a>
+									<a href="javascript:;" code="20">海淀区</a>
+									<a href="javascript:;" code="21">朝阳区</a>
+									<a href="javascript:;" code="22">东城区</a>
+									<a href="javascript:;" code="23">西城区</a>
+									<a href="javascript:;" code="24">丰台区</a>
+									<a href="javascript:;" code="25">昌平区</a>
+									<a href="javascript:;" code="26">密云县</a>
+									<a href="javascript:;" code="27">怀柔区</a>
+									<a href="javascript:;" code="28">大兴区</a>
+									<a href="javascript:;" code="29">延庆县</a>
+									<a href="javascript:;" code="30">顺义区</a>
+									<a href="javascript:;" code="31">石景山区</a>
+									<a href="javascript:;" code="32">房山区</a>
+									<a href="javascript:;" code="33">通州区</a>
+									<a href="javascript:;" code="36">门头沟区</a>
+									<a href="javascript:;" code="37">平谷区</a>
+								</div>
+							</div>
+						</div>
+						<div class="addr-search-box">
+							<form class="addr-search">
+								<input class="addr-ipt default" name="addr" placeholder="输入您的位置查找附近的商家" value="">
+								<input type="submit" class="addr-btn" value="搜索">
+							</form>
+							<span class="addr-search-err" style="display: none;">抱歉，没有找到您输入的位置，您可以试试其他地址</span>
+						</div>
+					</div>
+					<div class="shop-list-wrap">
+						<div class="shop-list-filter">
+							<ul class="sort-type">
+								<li class="active li-first">
+									<a href="javascript:;" hidefocus="true" data-type="">默认排行</a>
+								</li>
+								<li class="">
+									<a href="javascript:;" hidefocus="true" data-type="1">按成交量</a>
+								</li>
+								<li class="">
+									<a href="javascript:;" hidefocus="true" data-type="3">按人气</a>
+								</li>
+							</ul>
+							<div class="filter-check">
+								<label>
+									<input type="checkbox" class="chkbox" name="is_bzj">先行赔付
+								</label>
+							</div>
+							<div class="extra" >
+								<span class="btn-mode-map">地图模式</span>
+							</div>
+						</div>
+						<div id="JsShopList">
+						</div>
+						<div class="shop-list-page pagination">
+							<div class="pages" id="spages"> 
+								<!-- <span>1</span>&nbsp;<a href="javascript:;" data-pn="1">2</a>&nbsp;<a href="javascript:;" data-pn="2">3</a>&nbsp;<a href="javascript:;" data-pn="3">4</a>&nbsp;<a href="javascript:;" data-pn="4">5</a>&nbsp;<a href="javascript:;" data-pn="5">6</a>&nbsp;<a href="javascript:;" data-pn="6">7</a>&nbsp;<a href="javascript:;" data-pn="7">8</a>&nbsp;<a href="javascript:;" data-pn="8">9</a>&nbsp;<a href="javascript:;" data-pn="9">10</a>&nbsp;<a href="javascript:;" class="next" data-pn="1">下一页»</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-right cnt-right">
+					<div class="haoping-list">
+						<h3 class="tit">商家好评榜</h3>
+						<div class="cont-list">
+							<div class="cont-list-item">
+								<div class="s-num s-num-red">①</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://41947795.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic3.jpg"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://41947795.bang.360.cn/?from=index_bangcomm" target="_blank" title="联金诚维修中心" style="color:#185;">联金诚维修中心</a>
+										</h3>
+										<p>121571条评论</p>
+									</div>
+								</div>
+							</div>
+							<div class="cont-list-item">
+								<div class="s-num s-num-red">②</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://6842810.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic6.jpg"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://6842810.bang.360.cn/?from=index_bangcomm" target="_blank" title="顺通电脑维修" style="color:#185;">顺通电脑维修</a>
+										</h3>
+										<p>111576条评论</p>
+									</div>
+								</div>
+							</div>
+							<div class="cont-list-item">
+								<div class="s-num s-num-red">③</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://2476970.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic7.gif"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://2476970.bang.360.cn/?from=index_bangcomm" target="_blank" title="盛宏科技CBD维修工作室" style="color:#185;">盛宏科技CBD维修工作室</a>
+										</h3>
+										<p>98580条评论</p>
+									</div>
+								</div>
+							</div>
+							<div class="cont-list-item">
+								<div class="s-num">④</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://20664969.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic8.jpg"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://20664969.bang.360.cn/?from=index_bangcomm" target="_blank" title="百佳电脑维修" style="color:#185;">百佳电脑维修</a>
+										</h3>
+										<p>50689条评论</p>
+									</div>
+								</div>
+							</div>
+							<div class="cont-list-item">
+								<div class="s-num">⑤</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://20270551.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic2.gif"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://20270551.bang.360.cn/?from=index_bangcomm" target="_blank" title="鸿翔科技（北京）有限公司" style="color:#185;">鸿翔科技（北京）有限公司</a>
+										</h3>
+										<p>32346条评论</p>
+									</div>
+								</div>
+							</div>
+							<div class="cont-list-item">
+								<div class="s-num">⑥</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://46381819.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic9.jpg"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://46381819.bang.360.cn/?from=index_bangcomm" target="_blank" title="北京开天科技维修中心" style="color:#185;">北京开天科技维修中心</a>
+										</h3>
+										<p>15213条评论</p>
+									</div>
+								</div>
+							</div>
+							<div class="cont-list-item">
+								<div class="s-num">⑦</div>
+								<div class="list-cnt">
+									<a target="_blank" href="http://16890025.bang.360.cn/?from=index_bangcomm" class="spic"><img src="img/pic2.gif"></a>
+									<div class="list-cnt-inner">
+										<h3>
+											<a href="http://16890025.bang.360.cn/?from=index_bangcomm" target="_blank" title="忠信电脑维修" style="color:#185;">忠信电脑维修</a>
+										</h3>
+										<p>12209条评论</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-nav">
+			<div class="nav-item">
+				<span class="icon-left left1"></span>
+				<div class="f-n-right">
+					<h3>购物指南</h3>
+					<a href="http://bang.360.cn/c/help/#cont4" target="_blank">购物流程</a>
+					<a href="http://bang.360.cn/c/help/#cont11" target="_blank">用户注册</a>
+					<a href="http://bang.360.cn/c/help/#cont27" target="_blank">帮助文档</a>
+				</div>
+			</div>
+			<div class="nav-item">
+				<span class="icon-left left2"></span>
+				<div class="f-n-right">
+					<h3>支付方式</h3>
+					<a href="http://bang.360.cn/c/help/#cont5" target="_blank">在线支付</a>
+					<a href="http://bang.360.cn/c/help/#cont5" target="_blank">当面付款</a>
+				</div>
+			</div>
+			<div class="nav-item">
+				<span class="icon-left left3"></span>
+				<div class="f-n-right">
+					<h3>售后服务</h3>
+					<a href="http://bang.360.cn/c/help/#cont6" target="_blank">投诉建议</a>
+				</div>
+			</div>
+			<div class="nav-item">
+				<span class="icon-left left4"></span>
+				<div class="f-n-right">
+					<h3>特色保障</h3>
+					<a href="http://bang.360.cn/c/help/#cont1" target="_blank">360担保支付</a>
+				</div>
+			</div>
+			<div class="nav-item">
+				<span class="icon-left left5"></span>
+				<div class="f-n-right">
+					<h3>商家合作</h3>
+					<a href="#" target="_blank" style="color:#239BF8">加盟同城帮</a>
+					<a href="#" target="_blank">新闻采访/跨界合作</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyright-info">
+			<p class="link">
+				<span class="item" style="padding:0 10px">客服电话：4000-399-360 / 010-53767360</span>
+				<a href="#" class="item tousujianyi" style="padding:0 0 0 10px">投诉建议</a>
+				<a href="http://bang.360.cn/site/map/" target="_blank">网站地图</a>
+			</p>
+			<p>Copyright © 2005-2017  360.CN  All Rights Reserved  360安全中心</p>
+			<p>
+				<a href="http://www.miibeian.gov.cn/" target="_blank" style="color:#888">京ICP备08010314号-19</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;京公网安备110000000006号
+			</p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

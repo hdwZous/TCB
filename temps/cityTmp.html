@@ -1,0 +1,30 @@
+<!-- 城市列表模板 -->
+<script type="text/html" id="cityTmp">
+	<ul>
+		<li>
+			<h4>热门</h4>
+			<p>
+				<%for(var i=0; i<result.hotcity.length; i++){%>
+					<a href="javaScript:void(0)" data-citycode=<%=result.hotcity[i].code%> data-cityid=<%=result.hotcity[i].cityid%>><%=result.hotcity[i].name%></a>
+				<%}%>
+			</p>
+		</li>
+		<li>
+			<h4>拼音</h4>
+			<div class="filter_bar">
+				<%for(var j in result.citylist){%>
+					<a href="javaScript:void(0)"><%=j%></a>
+				<%}%>
+			</div>
+			<div class="city_wrap">
+				<%for(var k in result.citylist){%>
+					<p class=<%=k%> data-letter=<%=k%>>
+						<%for(var n=0;n<result.citylist[k].length;n++){%>
+							<a href="javaScript:void(0)" data-citycode=<%=result.citylist[k][n].code%> data-cityid=<%=result.citylist[k][n].id%>><%=result.citylist[k][n].name%></a>
+						<%}%>
+					</p>
+				<%}%>
+			</div>
+		</li>
+	</ul>
+</script>

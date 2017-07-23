@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>核心工具</title>
+	<script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="js/baiduTemplate.js"></script>
+	<script type="text/javascript">
+		// $(function(){
+		// 	$(".stuInfo").load("tems.html",function(){
+		// 		//请求数据
+		// 		$.ajax({
+		// 			url: "data/stu.json",
+		// 			success: function(data){
+		// 				//使用百度模板
+		// 				var htmlstr = baidu.template("firstTmp",data);
+		// 				$(".stuInfo").html(htmlstr);
+		// 			}
+		// 		})
+		// 	})
+		// })
+	</script>
+</head>
+<body>
+	<div class="stu"></div>
+	<script type="text/html" id="firstTmp">
+		<h1>班级信息</h1>
+		<p><%=classNum%></p>
+		<%if(stuList.length>0){%>
+			<h2>人数为:<%=stuList.length%></h2>
+			<%for(var i=0;i<stuList.length; i++){%>
+				<p>姓名:<%=stuList[i].name%> 年龄: <%=stuList[i].age%></p>
+			<%}%>
+		<%}else{%>
+				<h2>人数为:0</h2>
+			<%}%>
+	</script>
+</body>
+<script type="text/javascript">
+	var stuInfo = {
+            classNum: "1705",
+            stuList: [{
+                  name:"fengyl",
+                  age:12
+            },{
+                  name:"hah",
+                  age:12
+               },
+               {
+                  name:"ee",
+                  age:12
+               },
+               {
+                  name:"fxx",
+                  age:12
+               }]
+      };
+	var htmlstr = baidu.template("firstTmp",stuInfo);
+	$(".stu").html(htmlstr);
+</script>
+
+</html>
